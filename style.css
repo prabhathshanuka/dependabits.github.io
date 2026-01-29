@@ -51,27 +51,22 @@ body {
 .hero-top {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-}
-/* HERO PROFILE */
-.hero-profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
+  gap: 40px;
 }
 
+/* ===================== */
 /* SLIDESHOW */
+/* ===================== */
 .slideshow {
   position: relative;
-  height: 360px;          /* mobile */
+  height: 360px; /* mobile */
   overflow: hidden;
   border-radius: 16px;
 }
 
-
 .slide {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -83,26 +78,37 @@ body {
   opacity: 1;
 }
 
-/* FOUNDER */
+/* ===================== */
+/* HERO PROFILE */
+/* ===================== */
+.hero-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Founder image */
 .hero-profile img {
   width: 100%;
-  max-width: 420px;
+  max-width: 400px;
   border-radius: 18px;
   border: 1px solid rgba(0,194,255,0.35);
   box-shadow: 0 20px 50px rgba(0, 194, 255, 0.08);
 }
-/* PROFILE CARD */
+
+/* Profile card */
 .profile-card {
   background: linear-gradient(
     180deg,
-    rgba(22,26,35,0.9),
-    rgba(16,18,25,0.9)
+    rgba(22,26,35,0.95),
+    rgba(16,18,25,0.95)
   );
-    padding: 20px 22px;
+  padding: 18px 22px;
   border-radius: 14px;
   text-align: center;
-  max-width: 420px;
-  border: 1px solid rgba(255,255,255,0.05);
+  max-width: 400px;
+  border: 1px solid rgba(255,255,255,0.06);
 }
 
 .profile-card h3 {
@@ -124,7 +130,7 @@ body {
   line-height: 1.5;
 }
 
-/* TAGS */
+/* Tags */
 .profile-tags {
   display: flex;
   flex-wrap: wrap;
@@ -141,10 +147,12 @@ body {
   color: var(--accent);
 }
 
+/* ===================== */
 /* HERO CONTENT */
+/* ===================== */
 .hero-content {
-  margin-top: 30px;
-  max-width: 700px;
+  margin-top: 40px;
+  max-width: 720px;
 }
 
 .hero-content h1 {
@@ -226,22 +234,26 @@ body {
   font-size: 13px;
 }
 
+/* ===================== */
 /* DESKTOP */
+/* ===================== */
 @media (min-width: 768px) {
   .hero-top {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start; /* important */
     justify-content: space-between;
-    align-items: center;
-  }
-  .hero-image img {
-    max-width: 360px;
+    gap: 50px;
   }
 
-   .slideshow {
-    width: 80%;
-    height: 480px;  
-   }
+  .slideshow {
+    width: 60%;        /* balanced */
+    height: 500px;    /* cinematic */
+  }
+
+  .hero-profile img {
+    max-width: 420px;
+  }
+
   .features {
     grid-template-columns: repeat(4, 1fr);
   }
