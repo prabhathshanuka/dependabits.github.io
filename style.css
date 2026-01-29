@@ -80,6 +80,10 @@ body {
   justify-content: center;
   opacity: 0.6;
 }
+.image-placeholder>img{
+  width: 150px;
+
+}
 
 /* SECTIONS */
 .section {
