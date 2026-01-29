@@ -44,7 +44,7 @@ body::before {
 }
 
 .logo img {
-  width: 42px;
+  width: 56px;
   filter: drop-shadow(0 0 8px rgba(30,144,255,0.6));
 }
 
